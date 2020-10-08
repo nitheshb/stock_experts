@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "303063451062",
+    "firebase_url": "https://stockexperts-8d62b.firebaseio.com",
+    "project_id": "stockexperts-8d62b",
+    "storage_bucket": "stockexperts-8d62b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303063451062:android:a52603403d375549bb6d17",
+        "android_client_info": {
+          "package_name": "com.example.stock_experts"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303063451062-eeuasum0tj75to6on72f73ed6qe1mose.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdg-Uo3uaYpUJFEBPOFILBDatFBLtY2po"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303063451062-eeuasum0tj75to6on72f73ed6qe1mose.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
