@@ -230,6 +230,7 @@ class _SignupPageState extends State<SignupPage> {
           height: 5,
         ),
         TextFormField(
+          style: TextStyle(color: Colors.black),
           keyboardType: TextInputType.emailAddress,
           autofocus: false,
           controller: _email,

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:admob_flutter/admob_flutter.dart';
+// import 'package:admob_flutter/admob_flutter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:esys_flutter_share/esys_flutter_share.dart';
 import 'package:flutter/material.dart';
@@ -152,8 +152,8 @@ class _ConversationState extends State<Conversation> {
 
   void initState() {
     // TODO: implement initState
-    super.initState();
-     Admob.initialize(ams.getAdMobAppId());
+    // super.initState();
+    //  Admob.initialize(ams.getAdMobAppId());
 
     loadGrade();
 
