@@ -8,7 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class FirebaseController {
   static FirebaseController get instanace => FirebaseController();
 
-  final dbRef = FirebaseDatabase.instance.reference().child("royalPro");
+  final dbRef = FirebaseDatabase.instance.reference().child("stockExpertsRealDB");
 
   // Save Image to Storage
   Future<String> saveUserImageToFirebaseStorage(
@@ -260,7 +260,7 @@ class FirebaseController {
 
   // send chat messages from conversation screen
   sendChatMessage(chatId, body, lastMessageBody, type) async {
-    //  final dbRef = FirebaseDatabase.instance.reference().child("royalPro").child(chatId);
+    //  final dbRef = FirebaseDatabase.instance.reference().child("stockExpertsRealDB").child(chatId);
     //  dbRef.set({ 'lastMessageDetails':lastMessageBody});
 
     final dbRef1 =
@@ -308,7 +308,7 @@ class FirebaseController {
   }
 
   sendToClear121Message(chatId, body, lastMessageBody, type) async {
-    //  final dbRef = FirebaseDatabase.instance.reference().child("royalPro").child(chatId);
+    //  final dbRef = FirebaseDatabase.instance.reference().child("stockExpertsRealDB").child(chatId);
     //  dbRef.set({ 'lastMessageDetails':lastMessageBody});
 
     final dbRef1 =

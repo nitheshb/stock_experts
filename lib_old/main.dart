@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -47,6 +48,12 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
   void _incrementCounter() {
+    Firestore.instance
+          .collection('IAM')
+          .document("QM5d2GMdJcsnJiN48JLL")
+          .updateData({
+        'count':_counter++
+      });
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
@@ -98,6 +105,29 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.display1,
             ),
+                  StreamBuilder(     
+                    stream: Firestore.instance
+        .collection('IAM')
+        .snapshots(),
+            builder: (context, snapshot) {
+              if (snapshot.hasError) {
+                return Text('Error ${snapshot.error}');
+              }
+              if (snapshot.hasData && snapshot.data.documents.length > 0) {
+                return ListView.builder(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
+                  itemCount: snapshot.data.documents.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    var ds = snapshot.data.documents[index].data;
+                 
+
+                    return Text('infinite data');
+                  },
+
+                );
+              }
+              return Text('Loading');
+            })
           ],
         ),
       ),

@@ -241,7 +241,7 @@ class _CreateGroupProfileState extends State<CreateGroupProfile> {
                                           label: "Group Name",
                                           obscureText: false),
                                     ),
-                                    FadeAnimation(1.3, groupPicUpload()),
+                                    // FadeAnimation(1.3, groupPicUpload()),
                                     SizedBox(height: 10),
                                     FadeAnimation(
                                         1.3, groupCategoryFieldCustomField()),
@@ -336,15 +336,15 @@ class _CreateGroupProfileState extends State<CreateGroupProfile> {
                                           }
                                         }
 
-                                        if (_image == null) {
-                                          _showBasicsFlash(
-                                              context: context,
-                                              duration: Duration(seconds: 3),
-                                              messageText:
-                                                  'Please upload group DP ...!');
+                                        // if (_image == null) {
+                                        //   _showBasicsFlash(
+                                        //       context: context,
+                                        //       duration: Duration(seconds: 3),
+                                        //       messageText:
+                                        //           'Please upload group DP ...!');
                                      
-                                          return;
-                                        }
+                                        //   return;
+                                        // }
 
                                         if (_formKey.currentState.validate()) {
                                           //  the below save line is to trigger the save of multi select category
@@ -358,20 +358,22 @@ class _CreateGroupProfileState extends State<CreateGroupProfile> {
 
                                         
                                             DateTime now = new DateTime.now();
-                                            StorageReference
-                                                firebaseStorageRef =
-                                                FirebaseStorage.instance
-                                                    .ref()
-                                                    .child(
-                                                        "${userId}${now.millisecondsSinceEpoch}.jpg");
-                                            StorageUploadTask uploadTask =
-                                                firebaseStorageRef
-                                                    .putFile(_image);
-                                            var dowurl = await (await uploadTask
-                                                    .onComplete)
-                                                .ref
-                                                .getDownloadURL();
-                                            String ImageUrl = dowurl.toString();
+                                            // StorageReference
+                                            //     firebaseStorageRef =
+                                            //     FirebaseStorage.instance
+                                            //         .ref()
+                                            //         .child(
+                                            //             "${userId}${now.millisecondsSinceEpoch}.jpg");
+                                            // StorageUploadTask uploadTask =
+                                            //     firebaseStorageRef
+                                            //         .putFile(_image);
+                                            // var dowurl = await (await uploadTask
+                                            //         .onComplete)
+                                            //     .ref
+                                            //     .getDownloadURL();
+                                            // String ImageUrl = dowurl.toString();
+
+                                            String ImageUrl = "https://www.iconfinder.com/data/icons/hawcons/32/698394-icon-130-cloud-upload-512.png";
                                             setState(() {
                                               // Scaffold.of(context).showSnackBar(SnackBar(content: Text('Profile Picture Uploaded')));
                                             });
